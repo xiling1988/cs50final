@@ -12,11 +12,12 @@ function App() {
   const [started, setStarted] = useState(false);
 
   return (
-  <div className="App">
+  <div className="App bg-image">
     <header className="App-header">
       <div className='container'>
-        <Button variant='primary' onClick={() => setStarted(true)}>Start</Button>
-        <NitsModal show={started} onHide={() => setStarted(false)}/>
+        <h1 className='title'>NITS BRIEFING</h1>
+        <Button className='start-btn' variant='danger' onClick={() => setStarted(true)}>Start</Button>
+        <NitsModal className='modal' show={started} onHide={() => setStarted(false)}/>
       </div>
     </header>
   </div>

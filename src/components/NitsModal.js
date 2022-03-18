@@ -1,32 +1,25 @@
 import React from 'react';
-import Modal from 'react-bootstrap/Modal'
+import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
+import Slides from './Slides.js';
 
-const NitsModal = (props) => {
+const NitsModal = props => {
   return (
+    <div className='modal-80w'>
     <Modal
       {...props}
       size="lg"
       aria-labelledby="contained-modal-title-vcenter"
+      dialogClassName="modal-80w"
       centered
     >
-      <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">
-          Modal heading
-        </Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
-        <h4>Centered Modal</h4>
-        <p>
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-          consectetur ac, vestibulum at eros.
-        </p>
-      </Modal.Body>
+      <Slides/>
       <Modal.Footer>
         <Button onClick={props.onHide}>Close</Button>
       </Modal.Footer>
-    </Modal>);
+    </Modal>
+  </div>
+  );
 };
 
 export default NitsModal;
