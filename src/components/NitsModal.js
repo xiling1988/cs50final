@@ -1,8 +1,7 @@
 import React from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
-import Slides from './Slides.js';
-
+import ModalBody from './ModalBody.js';
 const NitsModal = props => {
   return (
     <div className='modal-80w'>
@@ -13,7 +12,7 @@ const NitsModal = props => {
       dialogClassName="modal-80w"
       centered
     >
-      <Slides/>
+      <ModalBody/>
       <Modal.Footer>
         <Button onClick={props.onHide}>Close</Button>
       </Modal.Footer>

@@ -53,3 +53,22 @@
 .modal-body {
   height: 60vh;
 }
+
+.carousel {
+  color: white;
+  height: 100%;
+  background-color: hsl(221,13%,14%);
+}
+
+.caritem {
+  height: 100%;
+  background-color: blue;
+}
+
+.carousel-item {
+  height: 100%;
+}
+
+.carousel-inner {
+  height: 100%;
+}
