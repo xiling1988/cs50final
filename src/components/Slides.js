@@ -11,7 +11,7 @@ const Slides = () => {
     };
   
     return (
-      <Carousel activeIndex={index} onSelect={handleSelect} className='carousel' interval={25000}>
+      <Carousel activeIndex={index} onSelect={handleSelect} className='carousel' interval={3600000}>
         <Carousel.Item>
           <Carousel.Caption className="caritem">
             <h3>First slide label</h3>
