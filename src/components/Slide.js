@@ -1,23 +1,30 @@
 import React from 'react';
-import Form from 'react-bootstrap/Form'
+import Form from 'react-bootstrap/Form';
+import { Row } from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
+import { connect } from 'react-redux';
 
-const Slide = ({title}) => {
+const Slide = ({ title }) => {
   return (
-    <div className='container'>
-    <div className='textarea'>
-      {/* <Carousel.Caption> */}
+    <div className="container">
+      <div className="textarea">
+        {/* <Carousel.Caption> */}
         <h3>{title}</h3>
-        <p>Please specify</p>
-      {/* </Carousel.Caption> */}
-    </div>
-    <div>
-      <Form className="textarea">
-        <Form.Group controlId="exampleForm.ControlTextarea1">
-          <Form.Label>Example textarea</Form.Label>
-          <Form.Control as="textarea" rows={6} />
-        </Form.Group>
-      </Form>
-    </div>
+        {/* <p>Please specify</p> */}
+        {/* </Carousel.Caption> */}
+      </div>
+      <div>
+      <Form className='textarea'>
+        <Row>
+          <Col>
+            <Form.Control placeholder="First name" />
+          </Col>
+          <Col>
+            <Form.Control placeholder="Last name" />
+          </Col>
+        </Row>
+    </Form>
+      </div>
     </div>
   );
 };
