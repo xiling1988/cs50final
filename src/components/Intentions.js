@@ -7,14 +7,13 @@ import { Col } from 'react-bootstrap';
 const intentionsForm = () => {
     return (
         <>
-        <Form.Label className="mr-sm-2" htmlFor="inlineFormCustomSelect" srOnly>
+        <Form.Label className="mr-sm-2" htmlFor="inlineFormCustomSelect">
         Intentions
       </Form.Label>
       <Form.Control
         as="select"
         className="mr-sm-2"
         id="inlineFormCustomSelect"
-        custom
         >
         <option value="3">Choose...</option>
         <option value="1">Divertion</option>
