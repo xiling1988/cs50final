@@ -1,33 +1,8 @@
 import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
 import Form from 'react-bootstrap/Form';
-import { Row } from 'react-bootstrap';
-import { Col } from 'react-bootstrap';
 
-const intentionsForm = () => {
-  return (
-    <>
-      <Form.Label className="mr-sm-2" htmlFor="inlineFormCustomSelect" srOnly>
-        Intentions
-      </Form.Label>
-      <Form.Control
-        as="select"
-        className="mr-sm-2"
-        id="inlineFormCustomSelect"
-        custom
-      >
-        <option value="3">Choose...</option>
-        <option value="1">Divertion</option>
-        <option value="0">Emergency Landing</option>
-        <option value="2">Ditching</option>
-        <option value="2">Fly Around</option>
-        <option value="2">Other</option>
-      </Form.Control>
-    </>
-  );
-};
-
-const intentionsText = () => {
+const instructionsText = ({input}) => {
   return (
     <>
       <Form.Group controlId="exampleForm.ControlTextarea1">
@@ -43,6 +18,23 @@ const intentionsText = () => {
 };
 
 class Instructions extends Component {
+
+  instructionsText = ({input}) => {
+    return (
+      <>
+        <Form.Group controlId="exampleForm.ControlTextarea1">
+          <Form.Label>Please Specify</Form.Label>
+          <Form.Control
+            as="textarea"
+            rows={3}
+            placeholder="Nature of Emergency..."
+            {...input}
+          />
+        </Form.Group>
+      </>
+    );
+  };
+
   render() {
     return (
       <div className="container">
@@ -54,7 +46,7 @@ class Instructions extends Component {
         </div>
         <div>
           <Form className="textarea">
-            <Field name="nature" component={intentionsText} />
+            <Field name="instructions" component={instructionsText} />
           </Form>
         </div>
       </div>
@@ -63,5 +55,6 @@ class Instructions extends Component {
 }
 
 export default reduxForm({
-  form: 'Instructions',
+  form: 'instructions',
+  destroyOnUnmount: false
 })(Instructions);

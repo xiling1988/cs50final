@@ -17,7 +17,7 @@ function App() {
       <div className='container'>
         <h1 className='title'>NITS BRIEFING</h1>
         <Button className='start-btn' variant='danger' onClick={() => setStarted(true)}>Start</Button>
-        <NitsModal className='modal' show={started} onHide={() => setStarted(false)}/>
+        <NitsModal className='modal' show={started} onHide={() => setStarted(false)} />
       </div>
     </header>
   </div>

@@ -4,7 +4,20 @@ import Form from 'react-bootstrap/Form';
 import { Row } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 
-const intentionsForm = () => {
+class Intentions extends Component {
+
+  intentionsText = ({ input }) => {
+    return (
+        <>
+        <Form.Group controlId="exampleForm.ControlTextarea1">
+            <Form.Label>Please Specify</Form.Label>
+            <Form.Control as="textarea" rows={3} placeholder="Nature of Emergency..." {...input}/>
+        </Form.Group>
+        </>
+    )
+  }
+
+  intentionsForm= ({ input }) => {
     return (
         <>
         <Form.Label className="mr-sm-2" htmlFor="inlineFormCustomSelect">
@@ -14,30 +27,18 @@ const intentionsForm = () => {
         as="select"
         className="mr-sm-2"
         id="inlineFormCustomSelect"
+        {...input}
         >
-        <option value="3">Choose...</option>
-        <option value="1">Divertion</option>
-        <option value="0">Emergency Landing</option>
-        <option value="2">Ditching</option>
-        <option value="2">Fly Around</option>
-        <option value="2">Other</option>
+        <option value="">Choose...</option>
+        <option value="diverting">Diverting</option>
+        <option value="land">Emergency Landing</option>
+        <option value="ditch">Ditching</option>
+        <option value="flyAround">Fly Around</option>
+        <option value="other">Other</option>
       </Form.Control>
           </>
     )
-}
-
-const intentionsText = () => {
-    return (
-        <>
-        <Form.Group controlId="exampleForm.ControlTextarea1">
-            <Form.Label>Please Specify</Form.Label>
-            <Form.Control as="textarea" rows={3} placeholder="Nature of Emergency..."/>
-        </Form.Group>
-        </>
-    )
-}
-
-class Intentions extends Component {
+  }
     render() {
         return (
       <div className='container'>
@@ -51,10 +52,10 @@ class Intentions extends Component {
       <Form className="textarea">
   <Row>
     <Col>
-      <Field name="aircraft" component={intentionsForm}/>
+      <Field name="intention" component={this.intentionsForm}/>
     </Col>
     <Col>
-        <Field name="nature" component={intentionsText}/>
+        <Field name="details" component={this.intentionsText}/>
     </Col>
   </Row>
 </Form>
@@ -65,5 +66,6 @@ class Intentions extends Component {
 }
 
   export default reduxForm({
-      form: "Intentions"
+      form: "intentions",
+      destroyOnUnmount: false
   })(Intentions);

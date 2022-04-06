@@ -1,11 +1,10 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
 import { useState } from "react";
-import Slide from "./Slide";
-import { addInstructions, addIntentions, addNature, addTime } from "../actions";
 import Nature from "./Nature";
 import Intentions from "./Intentions";
 import Instructions from "./Instructions";
+import Time from "./Time";
 
 const Slides = () => {
 
@@ -24,7 +23,7 @@ const Slides = () => {
             <Intentions/>
           </Carousel.Item>
           <Carousel.Item>
-            <Slide title="Time" action={addTime}/>
+            <Time/>
           </Carousel.Item>
           <Carousel.Item>
             <Instructions/>

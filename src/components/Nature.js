@@ -34,6 +34,7 @@ class Nature extends Component {
           className="mr-sm-2"
           id="inlineFormCustomSelect"
           {...input}
+          
         >
           <option unselectable="">Choose...</option>
           <option value="1">Boeing B777-200</option>
@@ -61,7 +62,7 @@ class Nature extends Component {
                 <Field name="aircraft" component={this.aircraftForm} />
               </Col>
               <Col>
-                <Field name="nature" component={this.natureText} />
+                <Field name="details" component={this.natureText} />
               </Col>
             </Row>
           </Form>
@@ -72,5 +73,6 @@ class Nature extends Component {
 }
 
 export default reduxForm({
-  form: 'Nature',
+  form: 'nature',
+  destroyOnUnmount: false
 })(Nature);

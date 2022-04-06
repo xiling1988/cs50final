@@ -11,6 +11,7 @@ const NitsModal = props => {
       aria-labelledby="contained-modal-title-vcenter"
       dialogClassName="modal-80w"
       centered
+      backdrop='static'
     >
       <ModalBody/>
       <Modal.Footer>
