@@ -52,10 +52,10 @@ class Intentions extends Component {
       <Form className="textarea">
   <Row>
     <Col>
-      <Field name="intention" component={this.intentionsForm}/>
+      <Field name="intentionCat" component={this.intentionsForm}/>
     </Col>
     <Col>
-        <Field name="details" component={this.intentionsText}/>
+        <Field name="intentionDetails" component={this.intentionsText}/>
     </Col>
   </Row>
 </Form>

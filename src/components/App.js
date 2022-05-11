@@ -3,6 +3,7 @@ import '../App.css';
 import Button from 'react-bootstrap/Button';
 import NitsModal from './NitsModal';
 import { useState } from 'react';
+import { connect } from 'react-redux';
 
 
 
@@ -10,7 +11,6 @@ import { useState } from 'react';
 function App() {
 
   const [started, setStarted] = useState(false);
-
   return (
   <div className="App bg-image">
     <header className="App-header">
@@ -28,4 +28,9 @@ function App() {
 //   setStart(!start);
 // };
 
-export default App;
+const mapStateToProps = (state) => {
+  console.log(state);
+  return state
+};
+
+export default connect(mapStateToProps)(App);

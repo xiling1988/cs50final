@@ -11,11 +11,11 @@ const NitsModal = props => {
       aria-labelledby="contained-modal-title-vcenter"
       dialogClassName="modal-80w"
       centered
-      backdrop='static'
+      // backdrop='static'
     >
       <ModalBody/>
       <Modal.Footer>
-        <Button onClick={props.onHide}>Close</Button>
+        <Button onClick={props.onHide}>Submit</Button>
       </Modal.Footer>
     </Modal>
   </div>

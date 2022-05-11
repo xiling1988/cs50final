@@ -2,24 +2,11 @@ import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
 import Form from 'react-bootstrap/Form';
 
-const instructionsText = ({input}) => {
-  return (
-    <>
-      <Form.Group controlId="exampleForm.ControlTextarea1">
-        <Form.Label>Please Specify</Form.Label>
-        <Form.Control
-          as="textarea"
-          rows={3}
-          placeholder="Nature of Emergency..."
-        />
-      </Form.Group>
-    </>
-  );
-};
 
 class Instructions extends Component {
 
   instructionsText = ({input}) => {
+
     return (
       <>
         <Form.Group controlId="exampleForm.ControlTextarea1">
@@ -46,7 +33,7 @@ class Instructions extends Component {
         </div>
         <div>
           <Form className="textarea">
-            <Field name="instructions" component={instructionsText} />
+            <Field name="instructions" component={this.instructionsText} />
           </Form>
         </div>
       </div>

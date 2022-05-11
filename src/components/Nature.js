@@ -62,7 +62,7 @@ class Nature extends Component {
                 <Field name="aircraft" component={this.aircraftForm} />
               </Col>
               <Col>
-                <Field name="details" component={this.natureText} />
+                <Field name="natureDetails" component={this.natureText} />
               </Col>
             </Row>
           </Form>
