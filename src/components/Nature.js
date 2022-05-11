@@ -37,10 +37,9 @@ class Nature extends Component {
           
         >
           <option unselectable="">Choose...</option>
-          <option value="1">Boeing B777-200</option>
-          <option value="0">BoeingB777-300</option>
-          <option value="2">Airbus A380-800</option>
-          <option value="2">Other</option>
+          <option value="777-200">Boeing B777-200</option>
+          <option value="777-300">BoeingB777-300</option>
+          <option value="380">Airbus A380-800</option>
         </Form.Control>
       </>
     );
