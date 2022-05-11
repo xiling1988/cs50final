@@ -3,6 +3,7 @@ import '../App.css';
 import Start from './Start';
 import Briefing from './Briefing';
 import { connect } from 'react-redux';
+import Route from './Route';
 
 const showStart = () => {
   if (window.location.pathname === '/') {
@@ -33,8 +34,13 @@ const showBriefing = () => {
 export default () => {
   return (
     <div>
-      {showStart()}
-      {showBriefing()}
+      <Route path="/">
+        <Start/>
+      </Route>
+      <Route path="/briefing">
+        <Briefing/>
+      </Route>
+      
     </div>
   )
 }

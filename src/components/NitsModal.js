@@ -2,6 +2,7 @@ import React from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import ModalBody from './ModalBody.js';
+import Link from './Link.js';
 const NitsModal = props => {
   return (
     <div className='modal-80w'>
@@ -15,7 +16,7 @@ const NitsModal = props => {
     >
       <ModalBody/>
       <Modal.Footer>
-        <Button onClick={props.onHide}>Submit</Button>
+        <Link href={'/briefing'} className="btn btn-primary">Submit</Link>
       </Modal.Footer>
     </Modal>
   </div>
